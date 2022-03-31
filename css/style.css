@@ -1,0 +1,169 @@
+* {
+    margin:0;
+    padding:0;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+ol{
+    list-style-type: none;
+}
+p,h1,h3{
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 2%;
+}
+
+.menu{
+    
+    padding:1%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14pt;
+    background-color: azure;
+    
+}
+#menu_li_inline li{
+    display: inline-block;
+    margin-inline: 2%;
+    position: center;
+}
+#menu_li_inline li:hover{
+    border-bottom: 2px solid;
+}
+
+/* estilos de pie de página */
+.piePagina{
+    padding-left: 2%;
+    border: 2px solid black;
+    background-image: url("../images/carbon_fibre.png");
+    margin-top: 9px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+.logofooter{
+    color:aqua;
+    font-family: 'Hurricane', cursive;
+    font-size: 24pt;
+    
+} 
+.whatsapp{
+    font-size: 18px;
+    color: greenyellow;
+}
+.instagram{
+    font-size: 18px;
+    color:deeppink;
+    background-color:black;
+}
+
+/* estilos de tabla en galería */
+
+.imagenesGaleria {
+    height:80px;
+    width: 80px;
+
+}
+.listaproductos, td, th{
+    border: 2px solid;
+    padding-top: 2px;
+    border-spacing: 2px;
+    width:1000px;
+    margin-left: 300px;
+} 
+td,th{
+    padding-left: 30px;
+} 
+
+#listaproductos_colores li{
+    display: inline-block;
+}
+.listaproductos_cuadrado{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+}
+.verde{
+    background-color: green;
+}
+.fucsia{
+    background-color: fuchsia;
+}
+.negro{
+    background-color: black;
+}
+
+/*estilos de formulario contactos */
+.logoContacto{
+   margin-left: 20%;
+  
+   padding: 4%;
+    width: 50%;
+    height: inherit;
+}
+#contacto_columna1 {
+    position:absolute;
+  /*  top:0px;*/
+    left:20px;
+    width:500px;
+    margin-top:2%;
+   
+}
+#contacto_columna2 {
+    margin-left:520px;
+    margin-right:20px;
+    margin-top:2%;
+    background-color:#dbdbda;
+}
+.formContacto{
+    border-left: 1px solid;
+    padding: 2%;
+    width: 80%;
+}
+.formContacto_imputText{
+    margin-bottom: 1%;
+    width:99%;
+}
+.formContacto_botones{
+    padding-top: 4%;
+}
+
+/* estilos de promos y combos*/
+.promo_central {
+    position:absolute;
+    left:500px;
+    padding: 2%;
+    margin-top: 2%;
+
+}
+.promo_central_imagen{
+    width: 200pt;
+    height: 240pt;
+}
+
+.promo_lista {
+    margin-left:820px;
+    margin-right:20px;
+    margin-top: 2%;
+    
+
+}
+.promo_lista_imagenes img{
+    width: 80px;
+    height: 80px;
+    padding: 2%;
+}
+
+/* estilos de personalizados */
+.personalizados li {
+    display: inline-block;
+    padding: 2%;
+}
+
+.personalizados_img img{
+    padding: 2%;
+    width: 400pt;
+    height: 250pt;
+}
