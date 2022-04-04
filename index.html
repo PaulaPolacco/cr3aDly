@@ -15,102 +15,186 @@
 
 </head>
 <body>
-    <nav class="menu">
-        <ul id= "menu_li_inline">
-            <li> <a href="index.html"><img src="images/cr3aDly_logo.png" alt="logo" class="imagenesGaleria"></a></li>
-            <li><a href="pages/promos_combos.html">Promociones y Combos</a> </li>
-            <li><a href="index.html">Galería</a><hr></li>
-            <li><a href="pages/personalizados.html">Personalizados</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-            <li><a href="pages/nuevas_propuestas.html">Nuevas Propuestas</a></li>
-
-        </ul>       
-    </nav>
-    
-    
-    <hr>
-    <h1>Galería</h1>
-    <p>En esta página se visualizarán todos los productos que ya están disponibles.
-        A futuro, esta galería se transformará en el e-shop del sitio.
-    </p>
-    <section>
-        <table class="listaproductos" >
-            <th class="listaproductos">Producto</th>
-            <th class="listaproductos">Precio</th>
-            <th class="listaproductos">Descripción</th>
-            <tr class="listaproductos">
-                <td><img src="images/galeria/porta_celus.png" alt="porta celu" class="imagenesGaleria"> </td>
-                <td>Precio: $00.00</td>
-                <td><ol>
-                    <li>Tamaño 0x0 cm</li>
-                    <li>Tiempo de impresión: 0 min</li>
-                    <li>Cantidad de filamento: 0 gr</li>
-                    <li>Colores disponibles<ul id="listaproductos_colores">
-                        <li class="cuadrado verde"> </li>
-                        <li class="cuadrado fucsia"> </li>
-                        <li class="cuadrado"> </li>
-                        <li class="cuadrado negro"> </li>
-                    </ul></li>
-                </ol></td>
-            </tr>
-            <tr class="listaproductos">
-                <td><img src="images/galeria/llaveros.png" alt="llaveros" class="imagenesGaleria"></td>
-                <td>Precio: $00.00</td>
-                <td><ol>
-                    <li>Tamaño 0x0 cm</li>
-                    <li>Tiempo de impresión: 0 min</li>
-                    <li>Cantidad de filamento: 0 gr</li>
-                    <li>Colores disponibles<ul id="listaproductos_colores">
-                        <li class="cuadrado verde"> </li>
-                        <li class="cuadrado fucsia"> </li>
-                        <li class="cuadrado"> </li>
-                        <li class="cuadrado negro"> </li>
-                    </ul></li>
-                </ol></td>
-            </tr>
-            </tr>
-            <tr class="listaproductos">
-                <td><img src="images/galeria/macetas.jpg" alt="macetas" class="imagenesGaleria"></td>
-                <td>Precio: $00.00</td>
-                <td><ol>
-                    <li>Tamaño 0x0 cm</li>
-                    <li>Tiempo de impresión: 0 min</li>
-                    <li>Cantidad de filamento: 0 gr</li>
-                    <li>Colores disponibles<ul id="listaproductos_colores">
-                        <li class="listaproductos_cuadrado verde"> </li>
-                        <li class="listaproductos_cuadrado fucsia"> </li>
-                        <li class="listaproductos_cuadrado"> </li>
-                        <li class="listaproductos_cuadrado negro"> </li>
-                    </ul></li>
-                </ol></td>
-            </tr>
-            </tr>
-            <tr>
-                <td><img src="images/galeria/porta_joystick.png" alt="porta joystick" class="imagenesGaleria"></td>
-                <td>Precio: $00.00</td>
-                <td><ol>
-                    <li>Tamaño 0x0 cm</li>
-                    <li>Tiempo de impresión: 0 min</li>
-                    <li>Cantidad de filamento: 0 gr</li>
-                    <li>Colores disponibles<ul id="listaproductos_colores">
-                        <li class="listaproductos_cuadrado verde"> </li>
-                        <li class="listaproductos_cuadrado fucsia"> </li>
-                        <li class="listaproductos_cuadrado"> </li>
-                        <li class="listaproductos_cuadrado negro"> </li>
-                    </ul></li>
-                </ol></td>
-            </tr>
-            </tr>
-        </table>
-    </section>
-  
-    <footer class="piePagina">
-        <a class="logofooter"><img src="images/favicon-32x32.png" alt=""> Cr3aDly</a>
-        <div><a href="https://api.whatsapp.com/send?phone=2804845599" class="whatsapp" target="_blank"> WhatsApp <i class="fa fa-whatsapp whatsapp-icon"></i></a>
-        </div>
-        <div>
-        <a href="https://www.instagram.com/cr3adly/?hl=es-la/" class="instagram">Instagram <i class="fa fa-instagram instagram-icon"></i></a>
-        </div>
-    </footer>
+    <div class="contenedorGaleria">
+        <header class="menu">
+            <nav>
+                <ul id= "menu_li_inline">
+                    <li><a href="index.html"><img src="images/cr3aDly_logo.png" alt="logo" class="menu_logo" ></a></li>
+                    <li><a href="pages/promos_combos.html">Promociones y Combos</a> </li>
+                    <li><a href="index.html">Galería</a><hr></li>
+                    <li><a href="pages/personalizados.html">Personalizados</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                    <li><a href="pages/nuevas_propuestas.html">Nuevas Propuestas</a></li>
+                </ul>
+            </nav>      
+        </header>
+        
+        <section class="galeriaDestacadosSection">
+            
+            <h1>Galería</h1>
+            <p>En esta página se visualizarán todos los productos que ya están disponibles.
+                A futuro, esta galería se transformará en el e-shop del sitio.
+            </p>
+             
+        </section>
+        
+        <section class="galeriaBodySection">
+            <div class="listaproductos" >
+                <div>
+                    <div><img src="images/galeria/porta_celus.png" alt="porta celu" class="imagenesGaleria"> </div>
+                    <div>Soporte para celular</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/llaveros.png" alt="llaveros" class="imagenesGaleria"></div>
+                    <div>Llavero Dragón</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/macetas.jpg" alt="macetas" class="imagenesGaleria"></div>
+                    <div>Maceta</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/porta_joystick.png" alt="porta joystick" class="imagenesGaleria"></div>
+                    <div>Porta Joystick</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/soporte_auriculares.jpg" alt="soporte auricular" class="imagenesGaleria"></div>
+                    <div>Soporte para auriculares</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/florero.jpg" alt="florero" class="imagenesGaleria"></div>
+                    <div>Florero</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/soporte_notebook.jpg" alt="soporte notebook" class="imagenesGaleria"></div>
+                    <div>Soporte para notebook</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/ajedrez.png" alt="ajedrez" class="imagenesGaleria"></div>
+                    <div>Ajedrez</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+                <div>
+                    <div><img src="images/galeria/aspa_ventilador.jpg" alt="aspa ventilador" class="imagenesGaleria"></div>
+                    <div>Aspas ventilador</div>
+                    <div>Precio: $00.00</div>
+                    <div><ol>
+                        <li>Tamaño 0x0 cm</li>
+                        <li>Tiempo de impresión: 0 min</li>
+                        <li>Cantidad de filamento: 0 gr</li>
+                        <li>Colores disponibles<ul id="listaproductos_colores">
+                            <li class="listaproductos_cuadrado verde"> </li>
+                            <li class="listaproductos_cuadrado fucsia"> </li>
+                            <li class="listaproductos_cuadrado"> </li>
+                            <li class="listaproductos_cuadrado negro"> </li>
+                        </ul></li>
+                    </ol></div>
+                </div>
+            </div>
+        </section>
+      
+        <footer class="piePagina">
+            <a class="logofooter"><img src="images/favicon-32x32.png" alt=""> Cr3aDly</a>
+            <div><a href="https://api.whatsapp.com/send?phone=2804845599" class="whatsapp" target="_blank"> WhatsApp <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+            </div>
+            <div>
+            <a href="https://www.instagram.com/cr3adly/?hl=es-la/" class="instagram">Instagram <i class="fa fa-instagram instagram-icon"></i></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

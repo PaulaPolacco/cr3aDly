@@ -13,24 +13,51 @@
     <link rel='stylesheet'  href='../css/style.css'>
     <title>Nuevas Propuestas</title>
 </head>
-<body>
-    <nav class="menu">
-        <ul id= "menu_li_inline"> 
-            <li> <a href="../index.html"><img src="../images/cr3aDly_logo.png" alt="logo" class="imagenesGaleria"></a></li>
-            <li><a href="promos_combos.html">Promociones y Combos</a> </li>
-            <li><a href="../index.html">Galería</a></li>
-            <li><a href="personalizados.html">Personalizados</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="nuevas_propuestas.html">Nuevas Propuestas</a> <hr> </li>
+<body class="contenedorNuevasPropuestas">
+    <header class="menu">
+        <nav>
+            <ul id= "menu_li_inline"> 
+                <li> <a href="../index.html"><img src="../images/cr3aDly_logo.png" alt="logo" class="menu_logo"></a></li>
+                <li><a href="promos_combos.html">Promociones y Combos</a> </li>
+                <li><a href="../index.html">Galería</a></li>
+                <li><a href="personalizados.html">Personalizados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nuevas_propuestas.html">Nuevas Propuestas</a> <hr> </li>
+            </ul> 
+        </nav>
+    </header>
 
-        </ul>       
-    </nav>
-    <hr>
-    <h1>Nuevas Propuestas</h1>
-    <p>En esta sección la idea es interactuar con el usuario para que la incorporación de nuevos productos / diseños sea concensuada.</p>
-    <h3>Votá por el nuevo producto!</h3>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTdUmM7Cp_3kiBnxNm2mn94TutcgXrN4cpPzxa_-UZNUvOYA/viewform?embedded=true" width="940" height="1098" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    <section class="propuestasDescripcion">
+        <h1>Nuevas Propuestas</h1>
+        <p>En esta sección la idea es interactuar con el usuario para que la incorporación de nuevos productos / diseños sea concensuada.</p>
+        <h3>Votá por el nuevo producto!</h3>
+    </section>
 
+    <section class="propuestasBody">
+        <div class="listaNuevosProductos">
+            <div>
+                <div><img src="../images/nuevas_propuestas/organizador_escritorio.png" alt="organizador" class="imagenesNuevasPropuestas"> </div>
+                <input type="button" value="Voto a este"/>        
+                <p>Organizador Escritorio</p>
+            </div>
+            <div>
+                <div><img src="../images/nuevas_propuestas/soporte_tablet_phone.png" alt="soporte" class="imagenesNuevasPropuestas"> </div>
+                <input type="button" value="Voto a este"/>        
+                <p>Soporte Tablet - Celular</p>
+            </div>
+            <div>
+                <div><img src="../images/nuevas_propuestas/spotify_keychain.png" alt="spotify_key" class="imagenesNuevasPropuestas"> </div>
+                <input type="button" value="Voto a este"/>        
+                <p>Spotify Keychain</p>
+            </div>
+            <div>
+                <div><img src="../images/nuevas_propuestas/identificadores_vasos.png" alt="identificadores_vasos" class="imagenesNuevasPropuestas"> </div>
+                <input type="button" value="Voto a este"/>        
+                <p>Identificadores para vasos</p>
+            </div>
+        </div>
+    </section>
+    
     <footer class="piePagina">
         <a class="logofooter"><img src="../images/favicon-32x32.png" alt=""> Cr3aDly</a>
         <div><a href="https://api.whatsapp.com/send?phone=2804845599" class="whatsapp" target="_blank"> WhatsApp <i class="fa fa-whatsapp whatsapp-icon"></i></a>
