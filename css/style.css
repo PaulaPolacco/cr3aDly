@@ -45,8 +45,9 @@ p,h1,h3{
 #menu_li_inline div:hover{
     border-bottom: 2px solid;
 }
-
-/* estilos de pie de página */
+/* -------------------------------*/
+/*    estilos de pie de página    */
+/* -------------------------------*/
 .piePagina{
     grid-area: footer;
     padding-left: 2%;
@@ -72,8 +73,9 @@ p,h1,h3{
     color:deeppink;
     background-color:black;
 }
-
-/* estilos de tabla en galería */
+/* -------------------------------*/
+/*   estilos de tabla en galería  */
+/* -------------------------------*/
 .contenedorGaleria{
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -131,78 +133,9 @@ p,h1,h3{
     background-color: black;
 }
 
-@media screen and (max-width:768px){
-    .contenedorGaleria{
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 1fr 5fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "destacados"
-        "galeria"
-        "footer"
-        ;
-        
-    }
-    .imagenesGaleria {
-        height:180px;
-        width: 180px;
-    
-    }
-    .listaproductos{
-        border-left: 2px solid;
-        border-right: 2px solid;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-inline: 10%;
-        display: flex;
-        flex-flow: row wrap-reverse;
-        justify-content: space-around;
-        align-items: center;
-    } 
-}
-
-@media screen and (max-width:468px){
-    .contenedorGaleria{
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.1fr 5fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "destacados"
-        "galeria"
-        "footer"
-        ;
-        
-    }
-    .imagenesGaleria {
-        height:120px;
-        width: 120px;
-    }
-    .menu_logo{
-        height:40px;
-        width: 40px;
-    }
-    .listaproductos{
-        padding: 2%;
-        padding-inline: 10%;
-        display: flex;
-        flex-flow: row wrap-reverse;
-        justify-content: space-around;
-        align-items: center;
-    } 
-    #menu_li_inline {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: baseline;
-        position: center;
-        width: 100%;
-        align-content: center;
-      }
-}
-
+/* -------------------------------*/
 /*estilos de formulario contactos */
+/* -------------------------------*/
 .contenedorContactos{
     display: grid;
     min-height: 100vh;
@@ -255,52 +188,9 @@ p,h1,h3{
     padding-top: 4%;
 }
 
-@media screen and (max-width:768px){
-    .contenedorContactos{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 1fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "formulario"
-        "footer"
-        ;
-    }
-    .logoContacto{
-        margin-left: 20%;
-       
-        padding: 4%;
-         width: 25%;
-         height: inherit;
-     }
-     .contacto_columna1 {
-         grid-area: formulario;
-         position:sticky;
-         display: inline-block;
-     }
-     .contacto_columna2 {
-         grid-area: formulario;
-         display: flex;
-         margin-top:2%;
-         background-color:#b8e3f0;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-     }
-}
-
-@media screen and (max-width:468px){
-    .contacto_columna2 {
-        grid-area: formulario;
-        display: flex;
-        margin-top:2%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color:#b8f0bb;    }
-}
-
-/* estilos de promos y combos*/
+/* -------------------------------*/
+/*    estilos de promos y combos  */
+/* -------------------------------*/
 .contenedorPromosyCombos{
     display: grid;
     min-height: 100vh;
@@ -346,41 +236,9 @@ p,h1,h3{
     padding: 2%;
 }
 
-@media screen and (max-width:768px){
-    .promo_central_imagen{
-        width: 300px;
-        height: 330px;
-    }
-    .promo_lista_imagenes img{
-        width: 150px;
-        height: 150px;
-        padding: 2%;
-    }
-}
-@media screen and (max-width:468px) {
-
-    .promo_lista_imagenes img{
-        width: 80px;
-        height: 80px;
-        padding: 2%;
-    }
-    .promo_central_imagen{
-        width: 200px;
-        height: 230px;
-    }
-    .promo_central {
-        grid-area: promoCentral;
-        padding: 2%;
-        margin-top: 2%;
-        display: flex;
-        flex-direction: column;
-        align-self: flex-start;
-        align-items: end;
-    
-    }
-}
-
-/* estilos de personalizados */
+/* -------------------------------*/
+/*    estilos de personalizados   */
+/* -------------------------------*/
 .contenedorPersonalizados{
     display:grid;
     min-height: 100vh;
@@ -422,32 +280,14 @@ p,h1,h3{
     height: 350px;
 }
 
-@media screen and (max-width:768px){
-    .personalizados {
-        display: inline-grid;
-      }
-    .personalizados__imagenCentral img{
-        width: 400px;
-        height: 250px;
-    }
-}
-@media screen and (max-width:468px) {
-    .personalizados__imagenCentral img{
-        width: 300px;
-        height: 150px;
-    }
-    .personalizados_img img{
-        width: 300px;
-        height: 150px;
-    }
-}
-/* estilos de nuevas propuestas */
+/* -------------------------------*/
+/*  estilos de nuevas propuestas  */
+/* -------------------------------*/
 .contenedorNuevasPropuestas{
     display:grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
-   /*grid-template-rows: 10% 10% 70% 10%;*/
     grid-template-areas: 
     "menu"
     "descripcion"
@@ -471,7 +311,91 @@ p,h1,h3{
     align-items: baseline;
 }
 
-@media screen and (max-width:768px){
+/* -----------------------------------------------------------------------------------*/
+/*                                  TABLET                                            */
+/* -----------------------------------------------------------------------------------*/
+@media screen and (max-width:768px) and (min-width:468px){
+
+    /*estilos para tablet en galeria */
+    .contenedorGaleria{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 5fr 0.1fr;
+        grid-template-areas: 
+        "menu"
+        "destacados"
+        "galeria"
+        "footer"
+        ;
+        
+    }
+    .imagenesGaleria {
+        height:180px;
+        width: 180px;
+    
+    }
+    .listaproductos{
+        border-left: 2px solid;
+        border-right: 2px solid;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-inline: 10%;
+        display: flex;
+        flex-flow: row wrap-reverse;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    /* estilos para tablet en contactos */
+    .contenedorContactos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        grid-template-areas: 
+        "menu"
+        "formulario"
+        "footer"
+        ;
+    }
+    .logoContacto{
+        margin-left: 20%;
+       
+        padding: 4%;
+         width: 25%;
+         height: inherit;
+     }
+     .contacto_columna1 {
+         grid-area: formulario;
+         position:sticky;
+         display: inline-block;
+     }
+     .contacto_columna2 {
+         grid-area: formulario;
+         display: flex;
+         margin-top:2%;
+         background-color:#b8e3f0;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+     /* estilos para tablet en promos y combos */
+    .promo_central_imagen{
+        width: 300px;
+        height: 330px;
+    }
+    .promo_lista_imagenes img{
+        width: 150px;
+        height: 150px;
+        padding: 2%;
+    }
+    /* estilos para tablet en personalizados */
+    .personalizados {
+        display: inline-grid;
+      }
+    .personalizados__imagenCentral img{
+        width: 400px;
+        height: 250px;
+    }
+    /* estilos para tablet en nuevas propuestas */
     .propuestasDescripcion{
         grid-area: descripcion;
         display:flex;
@@ -497,8 +421,85 @@ p,h1,h3{
         border: 2px solid;
       }
 }
-
+/* -----------------------------------------------------------------------------------*/
+/*                                     MOVIL                                          */
+/* -----------------------------------------------------------------------------------*/
 @media screen and (max-width:468px){
+    /*estilos para movil en galería */
+    .contenedorGaleria{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 5fr 0.1fr;
+        grid-template-areas: 
+        "menu"
+        "destacados"
+        "galeria"
+        "footer"
+        ;
+    }
+    .imagenesGaleria {
+        height:120px;
+        width: 120px;
+    }
+    .menu_logo{
+        height:40px;
+        width: 40px;
+    }
+    .listaproductos{
+        padding: 2%;
+        padding-inline: 10%;
+        display: flex;
+        flex-flow: row wrap-reverse;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    #menu_li_inline {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+        position: center;
+        width: 100%;
+        align-content: center;
+      }
+    /* estilos para contactos en movil */
+    .contacto_columna2 {
+        grid-area: formulario;
+        display: flex;
+        margin-top:2%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#b8f0bb;    }
+    /*estilos para movil en promos y combos  */
+    .promo_lista_imagenes img{
+        width: 80px;
+        height: 80px;
+        padding: 2%;
+    }
+    .promo_central_imagen{
+        width: 200px;
+        height: 230px;
+    }
+    .promo_central {
+        grid-area: promoCentral;
+        padding: 2%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        align-items: end;
+    }
+    /* estilos para movil en personalizados */
+    .personalizados__imagenCentral img{
+        width: 300px;
+        height: 150px;
+    }
+    .personalizados_img img{
+        width: 300px;
+        height: 150px;
+    }
+    /* estilos para movil en nuevas propuestas  */
     .contenedorNuevasPropuestas{
         display:grid;
       
