@@ -17,8 +17,8 @@
 
 </head>
 <body>
-    <div class="contenedorGaleria">
-        <header class="menu">
+    <div class="container-fluid">
+        <header class="row menu col-12">
             <nav>
                 <ul id= "menu_li_inline">
                     <li><a href="index.html"><img src="images/cr3aDly_logo.png" alt="logo" class="menu_logo" ></a></li>
@@ -31,19 +31,24 @@
             </nav>      
         </header>
         
-        <section class="galeriaDestacadosSection">
+        <section class="row galeriaDestacadosSection col-12">
             
-            <h1>Galería - Destacados</h1>
+            <h1>Galería</h1>
             <p>En esta página se visualizarán todos los productos que ya están disponibles.
                 A futuro, esta galería se transformará en el e-shop del sitio.
             </p>
-            <div class="galeria_destacados"><img src="images/galeria/porta_celus.png" alt="porta celu" class="imagenesGaleria"> </div>
-            <div>Soporte para celular</div>
+            <div class="galeria_destacados">
+                <h2>Destacados</h2>
+                <img src="images/galeria/porta_celus.png" alt="porta celu" class="imagenesGaleria">
+                <p>Soporte para celular</p> 
+            </div>
+            
              
         </section>
         
-        <section class="galeriaBodySection">
-            <div class="listaproductos" >
+        <section class="row galeriaBodySection">
+            <div class="col-lg-2 col-md-1"></div>
+            <div class="listaproductos col-lg-8 col-md-10 col-sm-12" >
                 <div>
                     <div><img src="images/galeria/porta_celus.png" alt="porta celu" class="imagenesGaleria"> </div>
                     <div>Soporte para celular</div>
@@ -189,9 +194,10 @@
                     </ol></div>
                 </div>
             </div>
+            <div class="col-lg-2 col-md-1"></div>
         </section>
       
-        <footer class="piePagina">
+        <footer class="row piePagina col-12">
             <a class="logofooter"><img src="images/favicon-32x32.png" alt=""> Cr3aDly</a>
             <div><a href="https://api.whatsapp.com/send?phone=2804845599" class="whatsapp" target="_blank"> WhatsApp <i class="fa fa-whatsapp whatsapp-icon"></i></a>
             </div>
