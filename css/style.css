@@ -28,6 +28,12 @@ p,h1,h3{
     
     border: 2px solid black;
 }
+
+.menu__navbar{
+    /*para eliminar el color blanco del navbar*/
+    --bs-bg-opacity: 0;
+    background-color: none;
+}
 .menu_logo{
     height:80px;
     width: 80px;
@@ -377,9 +383,9 @@ a {
 /* .col-lg-3{
     flex-wrap: wrap;
 } */
-.propuestasBody{
-    /* grid-area:body; */
-}
+/* .propuestasBody{
+     grid-area:body; 
+} */
 .listaNuevosProductos{
     display: flex;
     flex-flow: row wrap;

@@ -19,16 +19,33 @@
 <body>
     <div class="container-fluid">
         <header class="row menu col-12">              
-            <nav>
-                <ul id= "menu_li_inline"> 
-                    <li> <a href="../index.html"><img src="../images/cr3aDly_logo.png" alt="logo" class="menu_logo"></a></li>
-                    <li><a href="promos_combos.html">Promociones y Combos</a> <hr> </li>
-                    <li><a href="../index.html">Galería</a></li>
-                    <li><a href="personalizados.html">Personalizados</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="nuevas_propuestas.html">Nuevas Propuestas</a></li>
-                </ul>
-            </nav>       
+            <nav class="navbar navbar-expand-lg navbar-light bg-light menu__navbar">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"><img src="../images/cr3aDly_logo.png" alt="logo" class="menu_logo" ></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu_li_inline">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="promos_combos.html">Promociones y Combos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link"  href="../index.html">Galería</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="personalizados.html">Personalizados</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="nuevas_propuestas.html">Nuevas Propuestas</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav> 
         </header>
         <div class="row promoEncabezado col-12">
             <h1>Promos y Combos</h1>
