@@ -408,6 +408,10 @@ a {
 /* -----------------------------------------------------------------------------------*/
 @media screen and (max-width:768px) and (min-width:469px){
 
+    #menu_li_inline {
+        flex-flow: column wrap;
+    }
+
     /*estilos para tablet en galeria */
     /* .contenedorGaleria{
         display:grid;
@@ -521,7 +525,11 @@ a {
 /* -----------------------------------------------------------------------------------*/
 /*                                     MOVIL                                          */
 /* -----------------------------------------------------------------------------------*/
-@media screen and (max-width:468px){
+@media screen and (max-width:468px) and (min-width: 1px){
+
+    #menu_li_inline {
+        flex-flow: column wrap;
+    }
     /*estilos para movil en galería */
     /* .contenedorGaleria{
         display:grid;
@@ -551,15 +559,7 @@ a {
         justify-content: space-around;
         align-items: center;
     } 
-    #menu_li_inline {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: baseline;
-        position: center;
-        width: 100%;
-        align-content: center;
-      }
+
     /* estilos para contactos en movil */
     .contenedorContactos{
         display: grid;
