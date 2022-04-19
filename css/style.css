@@ -75,10 +75,30 @@ a {
     font-size: 24pt;
     
 } 
-.whatsapp{
+/* .whatsapp{
     font-size: 18px;
     color: greenyellow;
+} */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
 }
+
+.my-float{
+	margin-top:16px;
+}
+
 .instagram{
     font-size: 18px;
     color:deeppink;
@@ -116,12 +136,6 @@ a {
     100% {opacity: 0%}
 }
 .galeria_destacados{
-    animation-name: destacado;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-delay: 5s;
-    animation-timing-function: ease;
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -331,24 +345,28 @@ a {
 .personalizados{
     /* grid-area:personalizdos_body; */
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    /* flex-flow: row nowrap;
+    justify-content: space-around; */
     padding: 2%;
     align-items:center;
+}
+.indicadores{
+    margin-left: 0%;
+    margin-bottom: 2rem;
 }
 
 .personalizados_img img{
     padding: 2%;
-    width: 400px;
-    height: 250px;
+    width: 350px;
+    height: 600px;
 }
 
-.personalizados_img img:hover{
+/* .personalizados_img img:hover{
     border: 2px solid black;
     transform: translate(0px,-20%);
-}
+} */
 
-.personalizados__imagenCentral img{
+/* .personalizados__imagenCentral img{
     width: 600px;
     height: 350px;
 }
@@ -357,7 +375,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* -------------------------------*/
 /*  estilos de nuevas propuestas  */
@@ -489,13 +507,19 @@ a {
         height: 160px;
     }
     /* estilos para tablet en personalizados */
-    .personalizados {
+    /* .personalizados {
         display: inline-grid;
-      }
-    .personalizados__imagenCentral img{
+      } */
+    .personalizados_img img{
+        padding: 2%;
+        width: 350px;
+        height: 450px;
+    }
+
+    /* .personalizados__imagenCentral img{
         width: 400px;
         height: 250px;
-    }
+    } */
     /* estilos para tablet en nuevas propuestas */
     .propuestasDescripcion{
         /* grid-area: descripcion; */
@@ -618,12 +642,15 @@ a {
     }
     /* estilos para movil en personalizados */
     .personalizados {
-        display: inline-grid;
-
-      }
-    .personalizados__imagenCentral img{
+        --bs-gutter-x: 0rem;
+    }
+    /* .personalizados__imagenCentral img{
         width: 300px;
         height: 150px;
+    } */
+    
+    .indicadores{
+        margin-bottom: 0rem;
     }
     .personalizados_img img{
         width: 300px;
