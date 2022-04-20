@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* -------------------------------*/
+/*   estilos de tabla en galería  */
+/* -------------------------------*/
+.galeriaDestacadosSection {
+  padding: 2%;
+  border-bottom: 2px solid black; }
+
+.galeria_destacados {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+
+.imagenesGaleria {
+  height: 280px;
+  width: 280px; }
+
+.listaproductos {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-around;
+  align-items: center; }
+
+#listaproductos_colores li {
+  display: inline-block; }
+
+.listaproductos_cuadrado {
+  width: 20px;
+  height: 20px;
+  border: 1px solid; }
+
+.verde {
+  background-color: green; }
+
+.fucsia {
+  background-color: fuchsia; }
+
+.negro {
+  background-color: black; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html body {
+  height: 100%;
+  width: 100%; }
+
+ul {
+  list-style-type: none; }
+
+ol {
+  list-style-type: none; }
+
+p, h1, h3 {
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 2%; }
+
+/* -------------------------------*/
+/*    estilos de menú             */
+/* -------------------------------*/
+.menu {
+  padding: 1%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14pt;
+  background: linear-gradient(0deg, #00d4ff 0%, #006e85 65%, black 100%);
+  border: 2px solid black; }
+
+.menu__navbar {
+  /*para eliminar el color blanco del navbar*/
+  --bs-bg-opacity: 0;
+  background-color: none; }
+
+.menu_logo {
+  height: 80px;
+  width: 80px; }
+
+#menu_li_inline {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 1%;
+  position: center;
+  width: 100%; }
+  #menu_li_inline li a:hover {
+    border-bottom: 2px solid black; }
+
+a {
+  color: #05285e;
+  text-decoration: underline; }
+
+/* -------------------------------*/
+/*    estilos de pie de página    */
+/* -------------------------------*/
+.piePagina {
+  grid-area: footer;
+  padding-left: 2%;
+  border: 2px solid black;
+  background: linear-gradient(180deg, #00d4ff 0%, #006e85 0%, black 100%);
+  display: flex;
+  flex-flow: column wrap; }
+
+.logofooter {
+  color: aqua;
+  font-family: 'Hurricane', cursive;
+  font-size: 24pt; }
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100; }
+
+.my-float {
+  margin-top: 16px; }
+
+.instagram {
+  font-size: 18px;
+  color: deeppink;
+  background-color: black; }

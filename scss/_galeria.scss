@@ -1,0 +1,53 @@
+@import "variables";
+
+/* -------------------------------*/
+/*   estilos de tabla en galería  */
+/* -------------------------------*/
+
+
+.galeriaDestacadosSection{
+    padding: $galeria_gral_padding;
+    border-bottom: $general_border;
+}
+
+.galeria_destacados{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.imagenesGaleria {
+    height:280px;
+    width: 280px;
+
+}
+.listaproductos{
+    border-left:$general_border;
+    border-right: $general_border;
+    padding-left: $galeria_gral_padding;
+    padding-right: $galeria_gral_padding;
+   
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+
+#listaproductos_colores li{
+    display: inline-block;
+}
+.listaproductos_cuadrado{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+}
+.verde{
+    background-color: green;
+}
+.fucsia{
+    background-color: fuchsia;
+}
+.negro{
+    background-color: black;
+}
