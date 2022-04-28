@@ -8,12 +8,14 @@
 
 .galeria_destacados {
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center; }
+  flex-flow: column wrap;
+  padding: 0%;
+  align-items: center;
+  justify-content: none; }
 
 .imagenesGaleria {
-  height: 280px;
-  width: 280px; }
+  width: 280px;
+  height: 280px; }
 
 .listaproductos {
   border-left: 2px solid black;
@@ -22,8 +24,9 @@
   padding-right: 2%;
   display: flex;
   flex-flow: row wrap-reverse;
-  justify-content: space-around;
-  align-items: center; }
+  padding: 0%;
+  align-items: center;
+  justify-content: space-around; }
 
 #listaproductos_colores li {
   display: inline-block; }
@@ -33,14 +36,54 @@
   height: 20px;
   border: 1px solid; }
 
-.verde {
+.green {
   background-color: green; }
 
-.fucsia {
+.fuchsia {
   background-color: fuchsia; }
 
-.negro {
+.black {
   background-color: black; }
+
+/* -------------------------------*/
+/*    estilos de promos y combos  */
+/* -------------------------------*/
+.promoEncabezado, .promo_central {
+  padding: 2%; }
+
+.promoBody {
+  display: flex;
+  flex-wrap: nowrap; }
+
+.promo_central {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  align-self: center; }
+
+.promo_central_imagen {
+  width: 400px;
+  height: 440px; }
+
+.promo_lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20%;
+  margin-top: 2%; }
+
+.promo_lista_imagenes img {
+  width: 200px;
+  height: 240px;
+  padding: 2%;
+  filter: grayscale(100%);
+  transition: filter 1s; }
+
+.promo_lista_imagenes img:hover {
+  width: 220px;
+  height: 280px;
+  filter: none; }
 
 * {
   margin: 0;
@@ -67,7 +110,7 @@ p, h1, h3 {
   padding: 1%;
   font-family: "Ubuntu", sans-serif;
   font-size: 14pt;
-  background: linear-gradient(0deg, #00d4ff 0%, #006e85 65%, black 100%);
+  background: radial-gradient(circle, rgba(46, 216, 251, 0.790336) 0%, #f5ed44 0%, #fafafa 43%, #3dccf7 93%);
   border: 2px solid black; }
 
 .menu__navbar {
@@ -76,15 +119,15 @@ p, h1, h3 {
   background-color: none; }
 
 .menu_logo {
-  height: 80px;
-  width: 80px; }
+  width: 80px;
+  height: 80px; }
 
 #menu_li_inline {
   display: inline-flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: baseline;
   padding: 1%;
+  align-items: baseline;
+  justify-content: space-around;
   position: center;
   width: 100%; }
   #menu_li_inline li a:hover {
@@ -98,15 +141,17 @@ a {
 /*    estilos de pie de página    */
 /* -------------------------------*/
 .piePagina {
-  grid-area: footer;
   padding-left: 2%;
   border: 2px solid black;
-  background: linear-gradient(180deg, #00d4ff 0%, #006e85 0%, black 100%);
+  background: radial-gradient(circle, rgba(46, 216, 251, 0.790336) 0%, #f5ed44 0%, #fafafa 43%, #3dccf7 93%);
   display: flex;
-  flex-flow: column wrap; }
+  flex-flow: column wrap;
+  padding: 0%;
+  align-items: none;
+  justify-content: none; }
 
 .logofooter {
-  color: aqua;
+  color: #05285e;
   font-family: 'Hurricane', cursive;
   font-size: 24pt; }
 

@@ -6,31 +6,23 @@
 
 
 .galeriaDestacadosSection{
-    padding: $galeria_gral_padding;
-    border-bottom: $general_border;
+    padding:map-get($estilos_gral ,gral_padding );
+    border-bottom: map-get($estilos_gral , border );
 }
 
 .galeria_destacados{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    @include flexbox(flex, (column wrap), 0%, center, none);
 }
 
 .imagenesGaleria {
-    height:280px;
-    width: 280px;
-
+    @include imagen_config(280px, 280px);
 }
 .listaproductos{
-    border-left:$general_border;
-    border-right: $general_border;
-    padding-left: $galeria_gral_padding;
-    padding-right: $galeria_gral_padding;
-   
-    display: flex;
-    flex-flow: row wrap-reverse;
-    justify-content: space-around;
-    align-items: center;
+    border-left: map-get($estilos_gral , border );
+    border-right: map-get($estilos_gral , border );
+    padding-left: map-get($estilos_gral ,gral_padding );
+    padding-right: map-get($estilos_gral ,gral_padding ); 
+    @include flexbox(flex, (row wrap-reverse), 0%, center, space-around);
 } 
 
 
@@ -38,16 +30,13 @@
     display: inline-block;
 }
 .listaproductos_cuadrado{
-    width: 20px;
-    height: 20px;
+    @include imagen_config(20px, 20px);
     border: 1px solid;
 }
-.verde{
-    background-color: green;
+
+@each $color in green, fuchsia, black {
+    .#{$color}{
+        background-color: $color
+    }
 }
-.fucsia{
-    background-color: fuchsia;
-}
-.negro{
-    background-color: black;
-}
+

@@ -1,0 +1,39 @@
+/* -------------------------------*/
+/*    estilos de promos y combos  */
+/* -------------------------------*/
+@import "variables";
+.promoEncabezado{
+    padding: map-get($estilos_gral ,gral_padding );
+}
+.promoBody{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.promo_central {
+    @extend .promoEncabezado;
+    margin-top: map-get($estilos_gral ,gral_padding );
+    @include flexbox_promos(flex, column, end);
+    align-self: center;
+    
+
+}
+.promo_central_imagen{
+    @include imagen_config (400px, 440px);
+}
+
+.promo_lista {
+    @include flexbox_promos(flex, column, center);
+    margin-right:20%;
+    margin-top: map-get($estilos_gral ,gral_padding );
+}
+.promo_lista_imagenes img{
+    @include imagen_config(200px, 240px);
+    padding:map-get($estilos_gral ,gral_padding );
+    filter: grayscale(100%);
+    transition: filter 1s;
+}
+
+.promo_lista_imagenes img:hover{
+    @include imagen_config(220px, 280px);
+    filter: none;
+}

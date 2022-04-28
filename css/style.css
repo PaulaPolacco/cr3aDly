@@ -75,10 +75,7 @@ a {
     font-size: 24pt;
     
 } 
-/* .whatsapp{
-    font-size: 18px;
-    color: greenyellow;
-} */
+
 
 .float{
 	position:fixed;
@@ -107,26 +104,11 @@ a {
 /* -------------------------------*/
 /*   estilos de tabla en galería  */
 /* -------------------------------*/
-/* .contenedorGaleria{
-    display:grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 0.1fr 1fr 5fr 0.1fr;
-    grid-template-areas: 
-    "menu menu menu"
-    "destacados destacados destacados"
-    ". galeria ."
-    "footer footer footer"
-    ;
-} */
+
 
 .galeriaDestacadosSection{
     padding: 2%;
     border-bottom: 2px solid;
-    
-    /* grid-area: destacados;
-    align-items: center;
-    display: flex;
-    flex-flow: column;  */
 }
 @keyframes destacado {
     0% {opacity: 100%}
@@ -182,17 +164,7 @@ a {
 /* -------------------------------*/
 /*estilos de formulario contactos */
 /* -------------------------------*/
-/* .contenedorContactos{
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 0.1fr 4fr 0.1fr;
-    grid-template-areas: 
-    "menu menu"
-    "logo formulario"
-    "footer footer"
-    ;
-} */
+
 .contactoBody{
     height: 100%;
 }
@@ -265,20 +237,8 @@ a {
 /* -------------------------------*/
 /*    estilos de promos y combos  */
 /* -------------------------------*/
-/* .contenedorPromosyCombos{
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 3fr 3fr;
-    grid-template-rows: 0.1fr 0.1fr 3fr 0.1fr;
-    grid-template-areas: 
-    "menu menu"
-    "encabezado encabezado"
-    "promoCentral promoLista"
-    "footer footer"
-    ;
-} */
+
 .promoEncabezado{
-    /* grid-area: encabezado; */
     padding: 2%;
 }
 .promoBody{
@@ -286,7 +246,6 @@ a {
     flex-wrap: nowrap;
 }
 .promo_central {
-    /* grid-area: promoCentral; */
     padding: 2%;
     margin-top: 2%;
     display: flex;
@@ -301,7 +260,6 @@ a {
 }
 
 .promo_lista {
-    /* grid-area: promoLista; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,28 +283,13 @@ a {
 /* -------------------------------*/
 /*    estilos de personalizados   */
 /* -------------------------------*/
-/* .contenedorPersonalizados{
-    display:grid;
-    min-height: 100vh;
-    grid-template-columns: 100%;
-    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
-    grid-template-areas: 
-    "menu"
-    "personalizadosDescripcion"
-    "personalizdos_body"
-    "footer"
-    ;
-} */
+
 .personalizadosDescripcion{
-    /* grid-area: personalizadosDescripcion; */
     display: flex;
     padding: 2%;
 }
 .personalizados{
-    /* grid-area:personalizdos_body; */
     display: flex;
-    /* flex-flow: row nowrap;
-    justify-content: space-around; */
     padding: 2%;
     align-items:center;
 }
@@ -361,49 +304,15 @@ a {
     height: 600px;
 }
 
-/* .personalizados_img img:hover{
-    border: 2px solid black;
-    transform: translate(0px,-20%);
-} */
-
-/* .personalizados__imagenCentral img{
-    width: 600px;
-    height: 350px;
-}
-.personalizados__imagenCentral{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 /* -------------------------------*/
 /*  estilos de nuevas propuestas  */
 /* -------------------------------*/
-/* .contenedorNuevasPropuestas{
-    display:grid;
-    min-height: 100vh;
-    grid-template-columns:100%;
-    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
-    grid-template-areas: 
-    "menu"
-    "descripcion"
-    "body"
-    "footer"
-    ;
-} */
 .propuestasDescripcion{
-    /* grid-area: descripcion; */
+
     display:flex;
     padding: 2%;
     flex-flow: row nowrap;
 }
-/* .col-lg-3{
-    flex-wrap: wrap;
-} */
-/* .propuestasBody{
-     grid-area:body; 
-} */
 .listaNuevosProductos{
     display: flex;
     flex-flow: row wrap;
@@ -431,18 +340,7 @@ a {
     }
 
     /*estilos para tablet en galeria */
-    /* .contenedorGaleria{
-        display:grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 0.1fr 1fr 5fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "destacados"
-        "galeria"
-        "footer"
-        ;
-        
-    } */
+
     .imagenesGaleria {
         height:180px;
         width: 180px;
@@ -460,16 +358,7 @@ a {
         align-items: center;
     } 
     /* estilos para tablet en contactos */
-    /* .contenedorContactos{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 0.1fr 1fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "formulario"
-        "footer"
-        ;
-    } */
+
     .logoContacto{
         margin-left: 20%;
         padding: 4%;
@@ -477,21 +366,19 @@ a {
         height: inherit;
      }
      .contacto_columna1 {
-         /* grid-area: formulario; */
          position:sticky;
          display: inline-block;
      }
      .contacto_columna2 {
-         /* grid-area: formulario; */
          display: flex;
          margin-top:2%;
-         /*background-color:#b8e3f0;*/
          background: rgb(0,110,133);
          background: radial-gradient(circle, rgba(0,110,133,1) 0%, rgba(184,227,240,1) 100%);
          flex-direction: column;
          justify-content: center;
          align-items: center;
      }
+
      /* estilos para tablet en promos y combos */
     .promo_central_imagen{
         width: 300px;
@@ -507,22 +394,15 @@ a {
         height: 160px;
     }
     /* estilos para tablet en personalizados */
-    /* .personalizados {
-        display: inline-grid;
-      } */
+
     .personalizados_img img{
         padding: 2%;
         width: 350px;
         height: 450px;
     }
 
-    /* .personalizados__imagenCentral img{
-        width: 400px;
-        height: 250px;
-    } */
     /* estilos para tablet en nuevas propuestas */
     .propuestasDescripcion{
-        /* grid-area: descripcion; */
         display:flex;
         flex-flow: column nowrap;
         padding: 2%;
@@ -530,7 +410,6 @@ a {
         position:center;
     }
     .propuestasBody{
-        /* grid-area:body; */
         justify-content:space-evenly;
         align-items:stretch;
     }
@@ -555,18 +434,7 @@ a {
         flex-flow: column wrap;
     }
     /*estilos para movil en galería */
-    /* .contenedorGaleria{
-        display:grid;
-        grid-template-columns:100%;
-        grid-template-rows: 0.1fr 0.1fr 5fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "destacados"
-        "galeria"
-        "footer"
-        ;
-    } */
-    
+
     .imagenesGaleria {
         height:120px;
         width: 120px;
@@ -585,16 +453,7 @@ a {
     } 
 
     /* estilos para contactos en movil */
-    .contenedorContactos{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 0.1fr 1fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "formulario"
-        "footer"
-        ;
-    }
+
     .logoContacto{
         margin-left: 20%;
         padding: 4%;
@@ -602,12 +461,10 @@ a {
         height: inherit;
      }
     .contacto_columna1 {
-        /* grid-area: formulario; */
         position:sticky;
         display: inline-block;
     }
     .contacto_columna2 {
-        /* grid-area: formulario; */
         display: flex;
         margin-top:2%;
         flex-direction: column;
@@ -632,7 +489,6 @@ a {
         height: 230px;
     }
     .promo_central {
-        /* grid-area: promoCentral; */
         padding: 2%;
         margin-top: 2%;
         display: flex;
@@ -644,10 +500,6 @@ a {
     .personalizados {
         --bs-gutter-x: 0rem;
     }
-    /* .personalizados__imagenCentral img{
-        width: 300px;
-        height: 150px;
-    } */
     
     .indicadores{
         margin-bottom: 0rem;
@@ -658,20 +510,7 @@ a {
     }
     /* estilos para movil en nuevas propuestas  */
     
-    /* .contenedorNuevasPropuestas{
-        display:grid;
-      
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
-        grid-template-areas: 
-        "menu"
-        "descripcion"
-        "body"
-        "footer"
-        ;
-    } */
     .propuestasDescripcion{
-        /* grid-area: descripcion; */
         display:flex;
         flex-flow: column nowrap;
         padding: 2%;
@@ -679,7 +518,6 @@ a {
         position:center;
     }
     .propuestasBody{
-        /* grid-area:body; */
         display: inline-grid;
         align-items:stretch;
     }

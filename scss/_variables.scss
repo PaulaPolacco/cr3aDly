@@ -1,6 +1,32 @@
 $menu_background: linear-gradient(0deg, rgba(0,212,255,1) 0%, #006e85 65%, rgba(0,0,0,1) 100%); 
+$menu_background_patrio: radial-gradient(circle, rgba(46,216,251,0.7903362028405112) 0%, rgba(245,237,68,1) 0%, rgba(250,250,250,1) 43%, rgba(61,204,247,1) 93%);
+$menu_background_fiestas: linear-gradient(176deg, rgba(13,73,10,1) 18%, rgba(255,255,255,1) 54%, rgba(244,5,5,1) 83%);
 $footer_background:  linear-gradient(180deg, rgba(0,212,255,1) 0%, rgba(0,110,133,1) 0%, rgba(0,0,0,1) 100%); 
-$general_font: 'Ubuntu', sans-serif;
-$general_border: 2px solid black;
+$footer_background_fiestas: linear-gradient(176deg, rgba(244,5,5,1) 18%, rgba(255,255,255,1) 54%, rgba(13,73,10,1) 83%);
+$footer_background_patrio: radial-gradient(circle, rgba(46,216,251,0.7903362028405112) 0%, rgba(245,237,68,1) 0%, rgba(250,250,250,1) 43%, rgba(61,204,247,1) 93%);
 
-$galeria_gral_padding: 2%;
+$estilos_gral: (font: ('Ubuntu', sans-serif),
+                border: 2px solid black,
+                gral_padding: 2%
+                );
+$festividad: 'patrio';
+
+@mixin imagen_config($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin flexbox($flex, $flexfow, $padding, $align-items, $justify-content){
+    display: $flex;
+    flex-flow: $flexfow;
+    padding: $padding;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flexbox_promos($flex, $direction, $align-items,){
+    display: $flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+
+}

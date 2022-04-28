@@ -1,5 +1,6 @@
 @import "variables";
 @import "galeria";
+@import "promos_y_combos";
 * {
     margin:0;
     padding:0;
@@ -18,8 +19,8 @@ ol{
     list-style-type: none;
 }
 p,h1,h3{
-    font-family:$general_font;
-    margin-left: 2%;
+    font-family:map-get($estilos_gral , font );
+    margin-left: map-get($estilos_gral ,gral_padding );
 }
 
 /* -------------------------------*/
@@ -27,11 +28,16 @@ p,h1,h3{
 /* -------------------------------*/
 .menu{
     padding:1%;
-    font-family: $general_font;
+    font-family: map-get($estilos_gral , font );
     font-size: 14pt;
-    background: $menu_background;
-    
-    border: $general_border;
+    @if $festividad == 'patrio'{
+        background: $menu_background_patrio;
+    } @else if $festividad == 'fiestas'{
+        background: $menu_background_fiestas;
+    } @else {
+        background: $menu_background;
+    }
+    border: map-get($estilos_gral , border );
 }
 
 .menu__navbar{
@@ -40,20 +46,15 @@ p,h1,h3{
     background-color: none;
 }
 .menu_logo{
-    height:80px;
-    width: 80px;
+    @include imagen_config(80px,80px);
 }
 
 #menu_li_inline {
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content:space-around;
-    align-items:baseline;
-    padding: 1%;
+    @include flexbox(inline-flex, (row wrap), 1%, baseline, space-around);
     position:center;
     width: 100%; 
     li {a:hover{
-        border-bottom: $general_border;
+        border-bottom: map-get($estilos_gral , border );
     }}
 }
 
@@ -66,16 +67,25 @@ a {
 /*    estilos de pie de página    */
 /* -------------------------------*/
 .piePagina{
-    grid-area: footer;
-    padding-left: 2%;
-    border: $general_border;
-    background: $footer_background;
-    display: flex;
-    flex-flow: column wrap;
+    padding-left: map-get($estilos_gral ,gral_padding );
+    border: map-get($estilos_gral , border );
+    @if $festividad == 'patrio'{
+        background: $footer_background_patrio;
+    } @else if $festividad == 'fiestas'{
+        background: $footer_background_fiestas;
+    } @else {
+        background: $footer_background;
+    }
+
+    @include flexbox(flex, (column wrap), 0%, none, none);
     
 }
 .logofooter{
-    color:aqua;
+    @if $festividad == 'patrio'{
+        color:#05285e;
+    }@else{
+        color:aqua;
+    }
     font-family: 'Hurricane', cursive;
     font-size: 24pt;
     
