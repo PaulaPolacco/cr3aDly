@@ -15,18 +15,17 @@ ol{
 }
 p,h1,h3{
     font-family: 'Ubuntu', sans-serif;
-    margin-left: 2%;
 }
+/*para que no se vea el borde blanco a la derecha*/
+
 
 .menu{
-    grid-area: menu;
     padding:1%;
     font-family: 'Ubuntu', sans-serif;
     font-size: 14pt;
-    background: rgb(0,212,255);
-    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, #006e85 65%, rgba(0,0,0,1) 100%); 
-    
+    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, #006e85 65%, rgba(0,0,0,1) 100%);   
     border: 2px solid black;
+    width:auto;
 }
 
 .menu__navbar{
@@ -60,13 +59,12 @@ a {
 /*    estilos de pie de página    */
 /* -------------------------------*/
 .piePagina{
-    grid-area: footer;
     padding-left: 2%;
     border: 2px solid black;
-    background: rgb(0,212,255);
     background: linear-gradient(180deg, rgba(0,212,255,1) 0%, rgba(0,110,133,1) 0%, rgba(0,0,0,1) 100%); 
     display: flex;
     flex-flow: column wrap;
+    width: auto;
     
 }
 .logofooter{
@@ -109,6 +107,7 @@ a {
 .galeriaDestacadosSection{
     padding: 2%;
     border-bottom: 2px solid;
+    width: -moz-available;
 }
 @keyframes destacado {
     0% {opacity: 100%}
@@ -151,15 +150,14 @@ a {
     height: 20px;
     border: 1px solid;
 }
-.verde{
-    background-color: green;
-}
-.fucsia{
-    background-color: fuchsia;
-}
-.negro{
-    background-color: black;
-}
+.green {
+    background-color: green; }
+  
+  .fuchsia {
+    background-color: fuchsia; }
+  
+  .black {
+    background-color: black; }
 
 /* -------------------------------*/
 /*estilos de formulario contactos */
@@ -202,7 +200,6 @@ a {
     animation-timing-function: ease;
 }
 .contacto_columna1 {
-    /* grid-area:logo; */
     display: flex;
     position:center;
     flex-direction: column;
@@ -210,10 +207,8 @@ a {
     align-items: center;
 }
 .contacto_columna2 {
-    /* grid-area: formulario; */
     display: flex;
     border-left: 1px solid;
-    margin-right:20px;
     margin-top:2%;
     background-color:#dbdbda;
     flex-direction: column;
