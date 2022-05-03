@@ -1,0 +1,48 @@
+@import "variables";
+/* -------------------------------*/
+/*  estilos de nuevas propuestas  */
+/* -------------------------------*/
+.propuestasDescripcion{
+    @include flexbox(flex, (row nowrap), 2%, none, none);
+}
+.listaNuevosProductos{
+    @include flexbox(flex, (row wrap), 4%, baseline, space-between);
+}
+.imagenesNuevasPropuestas:hover{
+    border: map-get($estilos_gral, border );
+    padding: map-get($estilos_gral, gral_padding );
+    transform: translate(0px,-20%);
+}
+@media screen and (max-width:768px) and (min-width:469px){
+/* estilos para tablet en nuevas propuestas */
+.propuestasDescripcion{
+    @include flexbox(flex, (column nowrap), 2%, center, none);
+    position:center;
+}
+.propuestasBody{
+    justify-content:space-evenly;
+    align-items:stretch;
+    width: -moz-available;
+}
+.imagenesNuevasPropuestas{
+    @include imagen_config(240px,auto);
+}
+.listaNuevosProductos {
+    @include flexbox(flex, (row wrap), 4%, baseline, space-evenly);
+    border: map-get($estilos_gral, border );
+  }
+}
+@media screen and (max-width:468px) and (min-width: 1px){
+ /* estilos para movil en nuevas propuestas  */
+    .propuestasDescripcion{
+        @include flexbox(flex, (column nowrap), 2%, center, none);
+        position:center;
+    }
+    .propuestasBody{
+        display: inline-grid;
+        align-items:stretch;
+    }
+    .imagenesNuevasPropuestas{
+        @include imagen_config(100px,auto);
+    }
+}

@@ -1,0 +1,38 @@
+@import "variables";
+/* -------------------------------*/
+/*    estilos de personalizados   */
+/* -------------------------------*/
+.personalizadosDescripcion{
+    @include flexbox_personalizado(flex, 2%, none);
+}
+.personalizados{
+    @include flexbox_personalizado(flex, 2%, center);
+}
+.indicadores{
+    margin-left: 0%;
+    margin-bottom: 2rem;
+}
+.personalizados_img img{
+    padding: map-get($estilos_gral ,gral_padding );
+    @include imagen_config(350px,600px);
+}
+
+@media screen and (max-width:768px) and (min-width:469px){
+/* estilos para tablet en personalizados */
+    .personalizados_img img{
+        padding: map-get($estilos_gral ,gral_padding );
+        @include imagen_config(350px,450px);
+    }
+}
+@media screen and (max-width:468px) and (min-width: 1px){
+/* estilos para movil en personalizados */
+    .personalizados {
+        --bs-gutter-x: 0rem;
+    }
+    .indicadores{
+        margin-bottom: 0rem;
+    }
+    .personalizados_img img{
+        @include imagen_config(300px,150px);
+    }
+}

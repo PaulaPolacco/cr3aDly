@@ -1,0 +1,81 @@
+@import "variables";
+/* -------------------------------*/
+/*estilos de formulario contactos */
+/* -------------------------------*/
+.contactoBody{
+    height: 100%;
+}
+@keyframes logo_rotado {
+    0% {transform: rotateY(0deg)}
+    10% {transform: rotateY(18deg)}
+    15% {transform: rotateY(27deg)}
+    20% {transform: rotateY(36deg)}
+    25% {transform: rotateY(45deg)}
+    30% {transform: rotateY(54deg)}
+    35% {transform: rotateY(63deg)}
+    40% {transform: rotateY(72deg)}
+    45% {transform: rotateY(81deg)}
+    50% {transform: rotateY(90deg)}
+    55% {transform: rotateY(99deg)}
+    60% {transform: rotateY(108deg)}
+    65% {transform: rotateY(117deg)}
+    70% {transform: rotateY(126deg)}
+    75% {transform: rotateY(135deg)}
+    80% {transform: rotateY(144deg)}
+    85% {transform: rotateY(153deg)}
+    90% {transform: rotateY(162deg)}
+    95% {transform: rotateY(170deg)}
+    100% {transform: rotateY(180%)}
+}
+
+.logoContacto{
+    @include logo_contacto(20%, 4%, 50%, inherit);
+    @include animacion(logo_rotado, 2s, infinite, 1s, ease);
+}
+.contacto_columna1 {
+    @include flexbox_contacto(flex, column, center, center);
+    position:center;
+}
+.contacto_columna2 {
+    @include flexbox_contacto(flex, column, center, center);
+    border-left: 1px solid;
+    background-color:#dbdbda;
+}
+.formContacto{
+    font-family: map-get($estilos_gral, font );
+    padding: map-get($estilos_gral, gral_padding );
+    width: 80%;
+}
+.formContacto_imputText{
+    margin-bottom: 1%;
+    width:99%;
+}
+.formContacto_botones{
+    padding-top: 4%;
+}
+@media screen and (max-width:768px) and (min-width:469px){
+ /* estilos para tablet en contactos */
+    .logoContacto{
+        @include logo_contacto(20%, 4%, 50%, inherit);
+    }
+    .contacto_columna1 {
+        position:sticky;
+        display: inline-block;
+    }
+    .contacto_columna2 {
+        @include flexbox_contacto(flex, column, center, center);
+        background: radial-gradient(circle, rgba(0,110,133,1) 0%, rgba(184,227,240,1) 100%);
+    }
+}
+@media screen and (max-width:468px) and (min-width: 1px){
+    /* estilos para contactos en movil */
+        .logoContacto{
+            @include logo_contacto(35%, 4%, 25%, inherit);
+        }
+        .contacto_columna2 {
+            @include flexbox_contacto(flex, column, center, center);
+            margin-top:2%;
+            background-color:#abd0ad;
+            border-top: map-get($estilos_gral , border );
+        }
+    }

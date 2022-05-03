@@ -14,8 +14,6 @@
     margin-top: map-get($estilos_gral ,gral_padding );
     @include flexbox_promos(flex, column, end);
     align-self: center;
-    
-
 }
 .promo_central_imagen{
     @include imagen_config (400px, 440px);
@@ -32,8 +30,49 @@
     filter: grayscale(100%);
     transition: filter 1s;
 }
-
+ //si lo coloco dentro del anterior no anda
 .promo_lista_imagenes img:hover{
     @include imagen_config(220px, 280px);
     filter: none;
+}
+@media screen and (max-width:768px) and (min-width:469px){
+/* estilos para tablet en promos y combos */
+    .promo_central_imagen{
+        @include imagen_config (300px, 330px);
+    }
+    .promo_lista_imagenes img{
+        @include imagen_config (150px, 150px);
+        padding: map-get($estilos_gral ,gral_padding );
+    }
+    //si lo coloco dentro del anterior no anda
+    .promo_lista_imagenes img:hover{
+        @include imagen_config (160px, 160px);
+        filter: none;
+    }
+    // busque en internet que si pongo el hover y luego el active funciona al tocarlo
+    .promo_lista_imagenes img:active{
+        @include imagen_config (160px, 160px);
+        filter: none;
+    }
+}
+
+@media screen and (max-width:468px) and (min-width: 1px){
+/*estilos para movil en promos y combos  */
+    .promo_lista_imagenes img{
+        @include imagen_config (80px, 80px);
+        padding: map-get($estilos_gral ,gral_padding );
+    }
+    .promo_lista_imagenes img:hover{
+        @include imagen_config (100px, 100px);
+        padding: map-get($estilos_gral ,gral_padding );
+    }
+    .promo_central_imagen{
+        @include imagen_config (200px, 230px);
+    }
+    .promo_central {
+        padding: map-get($estilos_gral ,gral_padding );
+        margin-top: 2%;
+        @include flexbox_promos(flex, column, end);
+        align-self: flex-start;
+    }
 }

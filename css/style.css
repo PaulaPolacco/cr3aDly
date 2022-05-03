@@ -121,9 +121,7 @@ a {
     flex-flow: column nowrap;
     align-items: center;
 }
-.galeriaBodySection{
-    grid-area: galeria;
-}
+
 .imagenesGaleria {
     height:280px;
     width: 280px;
@@ -428,16 +426,17 @@ a {
     #menu_li_inline {
         flex-flow: column wrap;
     }
+    .menu_logo{
+        height:40px;
+        width: 40px;
+    }
     /*estilos para movil en galería */
 
     .imagenesGaleria {
         height:120px;
         width: 120px;
     }
-    .menu_logo{
-        height:40px;
-        width: 40px;
-    }
+
     .listaproductos{
         padding: 2%;
         padding-inline: 10%;

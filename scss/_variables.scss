@@ -9,7 +9,7 @@ $estilos_gral: (font: ('Ubuntu', sans-serif),
                 border: 2px solid black,
                 gral_padding: 2%
                 );
-$festividad: 'patrio';
+$festividad: 'normal';
 
 @mixin imagen_config($width, $height){
     width: $width;
@@ -28,5 +28,31 @@ $festividad: 'patrio';
     display: $flex;
     flex-direction: $direction;
     align-items: $align-items;
-
 }
+@mixin flexbox_contacto($flex, $direction, $justify-content, $align-items,){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin flexbox_personalizado($flex, $padding, $align-items){
+    display: $flex;
+    padding: $padding;
+    align-items: $align-items;
+}
+
+@mixin logo_contacto ($margin, $padding, $width, $height){
+    margin-left: $margin;
+    padding: $padding;
+    width: $width;
+    height: $height;
+}
+@mixin animacion($name, $duration, $icount, $delay, $tfunc){
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: $icount;
+    animation-delay: $delay;
+    animation-timing-function: $tfunc;
+}
+    
