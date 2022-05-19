@@ -15,6 +15,10 @@
     @include flexbox(flex, (column wrap), 0%, center, none);
 }
 
+.imagenesDestacados {
+    @include imagen_config(400px, 350px);
+}
+
 .imagenesGaleria {
     @include imagen_config(280px, 280px);
 }

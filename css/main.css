@@ -14,6 +14,10 @@
   align-items: center;
   justify-content: none; }
 
+.imagenesDestacados {
+  width: 400px;
+  height: 350px; }
+
 .imagenesGaleria {
   width: 280px;
   height: 280px; }
