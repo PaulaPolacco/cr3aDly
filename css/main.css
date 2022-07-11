@@ -33,6 +33,9 @@
   align-items: center;
   justify-content: space-around; }
 
+.more {
+  display: none; }
+
 #listaproductos_colores li {
   display: inline-block; }
 
@@ -393,7 +396,11 @@ ul {
 ol {
   list-style-type: none; }
 
-p, h1, h3 {
+p {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 0; }
+
+h1, h3 {
   font-family: "Ubuntu", sans-serif; }
 
 /* -------------------------------*/

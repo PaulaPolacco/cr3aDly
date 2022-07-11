@@ -30,6 +30,7 @@
     @include flexbox(flex, (row wrap-reverse), 0%, center, space-around);
 } 
 
+.more {display: none;}
 
 #listaproductos_colores li{
     display: inline-block;
