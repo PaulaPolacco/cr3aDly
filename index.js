@@ -105,7 +105,7 @@ for(const producto of productos){
     let div = document.createElement("div");
     div.innerHTML =  `<img src="${producto.img}" alt = "${producto.nombre}" class="imagenesGaleria">
                       <p>${producto.nombre}</p>
-                      <p>Precio: $00.00 <span id="dots">...</span></p>
+                      <p>Precio: $${producto.precio} <span id="dots">...</span></p>
                       <ol class = "more" id="more${producto.id}">
                         <li>Tamaño 0x0 cm</li>
                         <li>Tiempo de impresión: 0 min</li>
