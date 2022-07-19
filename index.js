@@ -11,7 +11,7 @@ class Producto{
 
 }
 
-function forma_pago(){
+function formaPago(){
     let pago;
     do {
         pago = parseInt(prompt("ingrese forma de pago: \n 1-Efectivo(-10%) \n 2-Transferencia(-5%) \n 3-crédito(+7%)"));
@@ -19,21 +19,7 @@ function forma_pago(){
     console.log(pago);
     return pago;
 }
-function comprar(productos){
-    let prod;
-    let msj = "";
-    let id = 0
 
-    productos.forEach(prod => msj += `\n ${id++} ${prod.nombre} precio: ${prod.precio} disponibles: ${prod.stock}`);
-    do {
-        prod = parseInt(prompt("Elija el producto a comprar: \n"+ msj));
-    } while (prod < 0 || prod > productos.length);
-
-    productos[prod].stock -= 1; 
-    console.log(productos[prod].precio);
-    console.log(productos[prod].stock);
-    return productos[prod].precio;
-}
 function calcularPrecioFinal(tipo,valor){
     switch (tipo){
         case 1: valor = valor*0.9; break;
@@ -42,23 +28,15 @@ function calcularPrecioFinal(tipo,valor){
     }
     alert(`El precio final de la compra es ${valor}`);
 }
-function Continua(){
-   let resp= prompt("Desea calcular otro valor? s/n");
-   if (resp.toLocaleLowerCase()==='s'){
-       return true;
-   }
-   else{
-       return false;
-   }
-}
+
 function actualizarDestacados(){
     console.log(productos.sort((a,b) => b.observado - a.observado));
     let destacados = productos.sort((a,b) => b.observado - a.observado).slice(0,3);
     console.log(destacados);
     let i=1;
     for (const destacado of destacados){
-        let contenedor_destacado = document.getElementById(`destacado${i}`);
-        contenedor_destacado.innerHTML = `<img src=${destacado.img} alt=${destacado.nombre} class="d-block  imagenesDestacados">`;
+        let contenedorDestacado = document.getElementById(`destacado${i}`);
+        contenedorDestacado.innerHTML = `<img src=${destacado.img} alt=${destacado.nombre} class="d-block  imagenesDestacados">`;
         i+=1;
     }
 }
@@ -83,11 +61,32 @@ function verMas(id) {
         actualizarDestacados();
     }
 
-  } 
+} 
+  
+function verCar(){
+    let detalle = "";
+    let total = 0;
+    for(let i = 0; i < localStorage.length; i++){
+        let key = localStorage.key(i);
+        let producto =  JSON.parse(localStorage.getItem(key));
+        total += parseInt(producto.precio)*parseInt(producto.cantidad);
+        detalle += localStorage.getItem(key);
+      }
+      alert("Detalle: \n"+detalle + "\n Total = "+ total);
+}
+
 //calcular pagos de productos
 let continua = true;
-let tipo_pago;
+let tipoPago;
 let monto;
+const addCar = (clave, nombre, precio) => {
+    let producto = JSON.parse(localStorage.getItem(clave));
+    let cantidad = 1;
+    if(producto){
+       cantidad = producto.cantidad + 1;
+    }
+    localStorage.setItem(clave, JSON.stringify({nombre, precio, cantidad}));
+};
 // crear los productos a vender y listarlos en la galeria
 const productos = [];
 productos.push(new Producto(1,"Llavero porta celu",250, "general",20,0,"images/galeria/llaveros.png"));
@@ -102,7 +101,11 @@ productos.push(new Producto(9,"Florero",700, "general",8,0,"images/galeria/flore
 
 listado = document.getElementById('listaProductos');
 for(const producto of productos){
+    
     let div = document.createElement("div");
+    let storage = `{${producto.id},${producto.nombre},${producto.precio}`;
+    console.log(producto.nombre)
+    
     div.innerHTML =  `<img src="${producto.img}" alt = "${producto.nombre}" class="imagenesGaleria">
                       <p>${producto.nombre}</p>
                       <p>Precio: $${producto.precio} <span id="dots">...</span></p>
@@ -117,17 +120,11 @@ for(const producto of productos){
                             <li class="listaproductos_cuadrado black"> </li>
                         </ul></li>
                        </ol>
-                       <button onclick="verMas(${producto.id})" id="moreBtn${producto.id}">+ Descripción</button`;
+                       <div>
+                            <button onclick="verMas(${producto.id})" id="moreBtn${producto.id}">+ Descripción</button>
+                            <button onclick="addCar(${producto.id}, '${producto.nombre}' ,${producto.precio})" id="buy${producto.id}">Comprar</button>
+                       </div>`;
     listado.append(div);
 }
+
 actualizarDestacados();
-/* alert("Bienvenido al simulador de compra de Cr3aDly");
-continua = Continua();
-while (continua){
-    monto = comprar(productos);
-    tipo_pago = forma_pago();
-   
-    calcularPrecioFinal(tipo_pago, monto);
-    continua = Continua();
-}
-alert("Ud ha salido del simulador de compra de Cr3aDly. Recargue para volver a empezar"); */
