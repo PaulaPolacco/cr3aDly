@@ -4,7 +4,10 @@
 /*   estilos de tabla en galería  */
 /* -------------------------------*/
 
-
+.carrito{
+    display: flex;
+    justify-content: end;
+}
 .galeriaDestacadosSection{
     padding:map-get($estilos_gral ,gral_padding );
     border-bottom: map-get($estilos_gral , border );

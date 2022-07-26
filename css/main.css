@@ -2,6 +2,10 @@
 /* -------------------------------*/
 /*   estilos de tabla en galería  */
 /* -------------------------------*/
+.carrito {
+  display: flex;
+  justify-content: end; }
+
 .galeriaDestacadosSection {
   padding: 2%;
   border-bottom: 2px solid black;

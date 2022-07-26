@@ -1,3 +1,4 @@
+
 class Producto{
     constructor(id,nombre, precio, tipo, stock, obs, img){
         this.id = parseInt(id);     //luego autogenerar
@@ -64,15 +65,31 @@ function verMas(id) {
 } 
   
 function verCar(){
-    let detalle = "";
+    let detalle = "<ul>";
     let total = 0;
     for(let i = 0; i < localStorage.length; i++){
         let key = localStorage.key(i);
         let producto =  JSON.parse(localStorage.getItem(key));
         total += parseInt(producto.precio)*parseInt(producto.cantidad);
-        detalle += localStorage.getItem(key);
+        detalle += `<li> ${producto.nombre} $: ${producto.precio} - ${producto.cantidad} unidades </li>`;//localStorage.getItem(key);
       }
-      alert("Detalle: \n"+detalle + "\n Total = "+ total);
+    detalle += "</ul>";
+    //  alert("Detalle: \n"+detalle + "\n Total = "+ total);
+      Swal.fire({
+        title: '<strong>Detalle de compra:</strong>',
+        icon: 'info',
+        html:
+        detalle + "\n Total = "+ total,
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText:
+          '<i class="fa fa-thumbs-up"></i> Pagar',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        cancelButtonText:
+          '<i class="fa fa-thumbs-down"></i> Eliminar carrito',
+        cancelButtonAriaLabel: 'Thumbs down'
+      })
 }
 
 //calcular pagos de productos
@@ -86,6 +103,13 @@ const addCar = (clave, nombre, precio) => {
        cantidad = producto.cantidad + 1;
     }
     localStorage.setItem(clave, JSON.stringify({nombre, precio, cantidad}));
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Producto agregado al carrito',
+        showConfirmButton: false,
+        timer: 1500
+      });
 };
 // crear los productos a vender y listarlos en la galeria
 const productos = [];
