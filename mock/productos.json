@@ -1,0 +1,13 @@
+
+[
+{"id":1,"nombre":"Llavero porta celu", "precio":250, "tipo":"general", "stock":20, "obs":0, "img":"images/galeria/llaveros.png" },
+{"id":2,"nombre":"Maceta","precio":600, "tipo":"general","stock":5,"obs":0,"img":"images/galeria/macetas.jpg"},
+{"id":3,"nombre":"Soporte para Celular","precio":500, "tipo":"general","stock":15,"obs":0,"img":"images/galeria/porta_celus.png"},
+{"id":4,"nombre":"Soporte para Notebook","precio":1000, "tipo":"general","stock":3,"obs":0,"img":"images/galeria/soporte_notebook.jpg"},
+{"id":5,"nombre":"Aspa Ventilador","precio":300, "tipo":"personalizado","stock":4,"obs":0,"img":"images/galeria/aspa_ventilador.jpg"},
+{"id":6,"nombre":"Juego de Ajedrez","precio":2500, "tipo":"general","stock":1,"obs":0,"img":"images/galeria/ajedrez.png"},
+{"id":7,"nombre":"Porta Joystick x 2","precio":800, "tipo":"general","stock":10,"obs":0,"img":"images/galeria/porta_joystick.png"},
+{"id":8,"nombre":"Soporte para Auriculares","precio":700, "tipo":"general","stock":6,"obs":0,"img":"images/galeria/soporte_auriculares.jpg"},
+{"id":9,"nombre":"Florero","precio":700, "tipo":"general","stock":8,"obs":0,"img":"images/galeria/florero.jpg"}
+]
+
