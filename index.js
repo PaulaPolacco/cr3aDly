@@ -1,8 +1,7 @@
 let productosaux; // para que quede consistente la parte de destacados
-
+const DOMbotonBuscar = document.querySelector('#buscarGaleria');
 const actualizarDestacados = async() => {
     let destacados = productosaux.sort((a,b) => b.obs - a.obs).slice(0,3);
-    console.log(destacados);
     let i=1;
     for (const destacado of destacados){
         let contenedorDestacado = document.getElementById(`destacado${i}`);
@@ -11,9 +10,9 @@ const actualizarDestacados = async() => {
     }
 }
 const verMas = async(id) => {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById(`more${id}`);
-    var btnText = document.getElementById(`moreBtn${id}`);
+    let dots = document.getElementById("dots");
+    let moreText = document.getElementById(`more${id}`);
+    let btnText = document.getElementById(`moreBtn${id}`);
     if (dots.style.display === "none") {
         dots.style.display = "inline";
         btnText.innerHTML = "+ Descripción";
@@ -25,54 +24,18 @@ const verMas = async(id) => {
         // incremento el flag observado para que figure en Destacados
          let prod = productosaux.find(prod => prod.id === id)
         prod.obs += 1;
-        console.log(`Producto: ${prod.nombre} - observado: ${prod.obs}`); 
-        //await actualizarObsProducto(id);
         actualizarDestacados();
     }
 } 
-const verCar = () => {
-    let detalle = "<ul>";
-    let total = 0;
-    for(let i = 0; i < localStorage.length; i++){
-        let key = localStorage.key(i);
-        let producto =  JSON.parse(localStorage.getItem(key));
-        total += parseInt(producto.precio)*parseInt(producto.cantidad);
-        detalle += `<li> ${producto.nombre} $: ${producto.precio} - ${producto.cantidad} unidades </li>`;
-      }
-    detalle += "</ul>";
-    Swal.fire({
-        title: '<strong>Detalle de compra:</strong>',
-        icon: 'info',
-        html:
-        detalle + "\n Total = "+ total,
-        showCloseButton: true,
-        showCancelButton: true,
-        focusConfirm: false,
-        confirmButtonText:
-            '<i class="fa fa-thumbs-up"></i> Pagar',
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-        cancelButtonText:
-            '<i class="fa fa-thumbs-down"></i> Eliminar carrito',
-        cancelButtonAriaLabel: 'Thumbs down'
-    })
-}
-const addCar = (clave, nombre, precio) => {
-    let producto = JSON.parse(localStorage.getItem(clave));
-    let cantidad = 1;
-    producto && (cantidad = producto.cantidad + 1);
-    localStorage.setItem(clave, JSON.stringify({nombre, precio, cantidad}));
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Producto agregado al carrito',
-        showConfirmButton: false,
-        timer: 1500
-      });
-};
 // solicita los productos a productService para listarlos en la galeria
-
-const cargarProductos = async () => {
-    let productos = await traerProductos();
+const cargarProductos = async (event) => {
+    let productos;
+    if (event){//entro por submit
+        event.preventDefault();
+        listado.innerHTML = "";
+        let search = document.getElementById("imputBuscar").value;
+        productos = await buscarProductos(search);
+    }else{productos = await traerProductos();}
     productosaux = productos;
     listado = document.getElementById('listaProductos');
     for(const producto of productos){
@@ -99,8 +62,10 @@ const cargarProductos = async () => {
     }
     actualizarDestacados(); 
 }
- 
+const cargarProductosBuscados = async () =>{};
 cargarProductos()
+DOMbotonBuscar.addEventListener('submit',cargarProductos);
+
 
 
 

@@ -11,6 +11,19 @@ const traerProductos = async () => {
         console.log(error);
     }
 };
+const buscarProductos = async (search) => {
+    try {
+        const resp = await fetch("https://cr3adly.000webhostapp.com/productos.json",{
+            method: "GET",
+            headers: {
+            }});
+        const data = await resp.json();
+        prod = data.filter(prod => prod.nombre.includes(search));
+        return prod;
+    } catch (error) {
+        console.log(error);
+    }
+}; 
 
 const actualizarObsProducto = async (id) => {
     try {
@@ -22,8 +35,6 @@ const actualizarObsProducto = async (id) => {
         prod = data.find(prod => prod.id === id);
         prod.obs +=1;
         console.log(prod.obs);
-      //  data.observado += 1;
-      //  return data;
         await postProducto(prod);
     } catch (error) {
         console.log(error);
