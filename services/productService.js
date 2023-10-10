@@ -1,7 +1,7 @@
   
 const traerProductos = async () => {
     try {
-        const resp = await fetch("https://cr3adly.000webhostapp.com/productos.json",{
+        const resp = await fetch("https://github.com/PaulaPolacco/archivos/blob/main/productos.json",{
             method: "GET",
             headers: {
             }});
@@ -13,7 +13,7 @@ const traerProductos = async () => {
 };
 const buscarProductos = async (search) => {
     try {
-        const resp = await fetch("https://cr3adly.000webhostapp.com/productos.json",{
+        const resp = await fetch("https://github.com/PaulaPolacco/archivos/blob/main/productos.json",{
             method: "GET",
             headers: {
             }});
@@ -27,7 +27,7 @@ const buscarProductos = async (search) => {
 
 const actualizarObsProducto = async (id) => {
     try {
-        const resp = await fetch("https://cr3adly.000webhostapp.com/productos.json",{
+        const resp = await fetch("https://github.com/PaulaPolacco/archivos/blob/main/productos.json",{
             method: "GET",
             headers: {
             }});
